@@ -1,28 +1,10 @@
+import Navbar from "@/components/Navbar";
 import React from "react";
-import Link from "next/link";
 
 const index = () => {
   return (
     <>
-      <nav>
-        <ul className="menu-bar">
-          <li className="">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="">
-            <Link href="/about">About</Link>
-          </li>
-          <li className="">
-            <Link href="/contact">Contact</Link>
-          </li>
-          <li className="">
-            <Link href="/blog">Blog</Link>
-          </li>
-          <li className="">
-            <Link href="/product">Product</Link>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
       <header className="header">
         <div className="brand_box"></div>
         <div className="text_box">
