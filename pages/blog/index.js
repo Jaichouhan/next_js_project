@@ -1,7 +1,19 @@
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 import React from "react";
 
-const index = () => {
+export const getStaticProps = async () => {
+  const res = await fetch("https://dummyjson.com/products");
+  const data = await res.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
+};
+
+const index = ({ data }) => {
   return (
     <>
       <Navbar />
@@ -18,6 +30,21 @@ const index = () => {
             Jaipal Chouhan
           </a>
         </div>
+        {data &&
+          data.products &&
+          data.products.slice(0, 5).map((data, i) => (
+            <div className="" key={i}>
+              <h1>{data.brand}</h1>
+              <Link href={`/blog/${data.id}`}>
+                <h2>{data.category}</h2>
+              </Link>
+              <h3>{data.description}</h3>
+              <h4>{data.price}</h4>
+              <h5>{data.title}</h5>
+              <h6>{data.rating}</h6>
+              <div style={{ marginTop: "30px" }}></div>
+            </div>
+          ))}
       </header>
     </>
   );
