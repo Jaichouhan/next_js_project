@@ -11,6 +11,7 @@ const Errorpage = () => {
       route.push("/");
     }, 3000);
   }, []);
+
   return (
     <>
       <Navbar />
