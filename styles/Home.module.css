@@ -4,3 +4,12 @@
   color: aqua;
   background-color: bisque;
 }
+.discount {
+  font-weight: 400;
+  background-color: rgb(241, 91, 44);
+  color: rgb(242, 242, 242);
+  font-size: 0.88rem;
+  transition: opacity 300ms ease-out 0s;
+  padding: 18px;
+  text-align: center;
+}

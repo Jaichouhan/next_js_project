@@ -10,7 +10,7 @@ const index = () => {
         <h1>My Name is jai</h1>
         <button onClick={() => route.replace(`user/jai`)}>
           {" "}
-          Go Your Name Page{" "}
+          Go Your Name Page Index{" "}
         </button>
       </div>
     </>
